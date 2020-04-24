@@ -16,6 +16,10 @@ let userArr = [
 ];
 
 server.get('/', (req, res) => {
+    res.status(200).json({ api: "up" });
+});
+
+server.get('/users', (req, res) => {
     res.status(200).json(userArr);
 });
 
